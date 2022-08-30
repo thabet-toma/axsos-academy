@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.header{
+    width: 561px;
+    background-color: black;
+    height: 35px;
+    margin-left: 110px;
+}
+.containar{
+    display: flex;
+    margin-left: 110px;
+}
+.posts{
+    border: 2px solid black;
+    width: 350px;
+    height: 90px;
+    margin: 44px 15%;
+
+}
+.head{
+    display: flex; 
+    padding: 10px;   
+}
+.head button{
+    margin: 10px 10px 10px 50px;
+    width: 50px;
+    height: 25px;
+    background-color: #ffd966;
+    
+}
+.wisdom{
+    
+        margin-left: 20px;
+        font-weight:bold ;
+    
+}
+.like1,.like2,.like3{
+    margin-top: 15px;
+    margin-left: 50px;
+    width:95px;
+    text-align: center;
+}
+.profile{
+    height: 200px;
+    width: 150px;
+    border: 2px solid black;
+    margin-top: 44px;
+}
+.img{
+    height: 70px;
+    margin: 20px;
+    display: block;
+}
+.button{
+    margin :10px 15px 10px 20px;
+    
+}
