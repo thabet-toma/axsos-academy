@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+		#ocean{
+			background-image: url("ocean.jpg");
+			width:900px;
+			height: 700px;
+			margin: 0;
+		padding: 0;
+		}
+.player{
+	position: absolute;
+	background-image: url(player.png);
+	width: 70px;
+	height: 75px;
+	
+}
+.enemy{
+	position: absolute;
+	background-image: url(enemy.png);
+	width: 70px;
+	height: 75px;
+
+	}
+	.missile{
+		position: absolute;
+	background-color: blue ;
+	width: 2px;
+	height: 10px;
+	}
+	</style>
+	<div id="ocean">
+		<div id="player">
+			 </div>
+			<div id="enemy">
+				
+			</div>
+			<div id="missile">
+			 </div>
+	</div>
+
+
+
+
+
+
+	<script type="text/javascript">
+		var player={
+			left:200,
+			top:620
+		}
+		var enemy=[
+		{left:350,top:200},
+		{left:200,top:400},
+		{left:100,top:50},
+		{left:300,top:200},
+		{left:100,top:50},
+		{left:300,top:200}
+		]
+		var missile=[]
+		function drowmissile(){
+			content=""
+			for(idx=0;idx<missile.length;idx++){
+				content+="<div class='missile' style='left:"+missile[idx].left+"px;top:"+missile[idx].top+"px '></div>"
+				document.getElementById('missile').innerHTML=content;
+
+		}}
+		function drowplayer(){
+			content="<div class='player' style='left:"+player.left+"px;top:"+player.top+"px '></div>"
+			document.getElementById('player').innerHTML=content;
+		}
+			
+drowplayer();
+document.onkeydown =function(e){
+	console.log(e)
+	if(e.keyCode==37 && player.left>0){
+		player.left-=10;
+	}
+	if(e.keyCode==39&& player.left<850){
+		player.left+=10;
+	}
+	
+	if(e.keyCode==38&& player.top>500){
+		player.top-=10;
+	}
+	if(e.keyCode==40&& player.top<625){
+		player.top+=10;
+	}
+	if(e.keyCode==32 ){
+		missile.push({left:(player.left+34),top:(player.top-8)})
+
+	}
+
+	drowplayer()
+}
+function drowenemy() {
+	var content=""
+	for(idx=0;idx<enemy.length;idx++){
+		content+="<div class='enemy' style='left:"+enemy[idx].left+"px;top:"+enemy[idx].top+"px '></div>"
+
+	}
+	document.getElementById('enemy').innerHTML=content;
+
+}
+function moveenemy(){
+	for(idx=0;idx<enemy.length;idx++){
+		enemy[idx].top+=1;
+	}
+}
+drowenemy()
+function movemissile(){
+	for(idx=0;idx<missile.length;idx++){
+		missile[idx].top-=4;
+}}
+function gameloop(){
+	moveenemy()
+	drowenemy();
+	drowplayer();
+
+	
+	setTimeout(gameloop,10)
+	for(i=0;i<enemy.length;i++){
+		if(enemy[i].top+75==700){
+			enemy[i].top=0
+
+		}
+		for(j=0;j<missile.length;j++){
+			if((missile[j].top<=(enemy[i].top+75)&&(missile[j].top>=(enemy[i].top)))&& ((missile[j].left>=(enemy[i].left))&&((missile[j].left<=(enemy[i].left+70)))
+				))
+			{
+				enemy[i].top=0
+
+			}
+		}
+	}
+	movemissile();
+	drowmissile();
+}
+gameloop()
+	
+	
+
+	</script>
+</body>
+</html>
