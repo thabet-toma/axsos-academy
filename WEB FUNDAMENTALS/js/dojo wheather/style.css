@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    width: 100%;
+    background-color:#9fc5f8 ;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.title{
+    color: white;
+    margin-left: 10%;
+}
+.link-header{
+    margin-left: 400px;
+    width: 400px;
+    
+}
+.link-header a{
+    margin-right: 30px;
+    
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+}
+.temp-head{
+    display: flex;
+    margin-left: 10%;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    margin-top: 20px;
+    margin-right: 10%;
+    margin-left: 10%;
+    
+}
+
+
+.convert-temp select{
+    height: 30px;
+    
+    
+    
+    
+    
+
+}
+.pic{
+    display: flex;
+    margin-right: 10%;
+    
+    justify-content: space-between;
+    margin: 20px 10%  ;
+
+}
+.pic img{
+    height:110px;
+    border: 6px solid white;
+    border-radius: 70px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+   
+}
+figure{
+    background-color: #eeeeee;
+    width: 150px;
+    height: 250px;
+
+}
+figcaption{
+    text-align: center;
+}
+figure h3{
+    font-weight:550;
+    text-align: center;
+    margin-top: 10px;
+}
+.temp{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+.max{
+    color: red;
+    font-weight: 900;
+    font-size: 20px;
+    
+}
+.min{
+    color: #2c78e3;
+    font-weight: 900;
+    font-size: 20px;
+}
+.cookie{
+    background-color: #eeeeee;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.cookie img{
+    margin-left: 20px;
+}
+.cookie{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    left:105px;
+    width: 846px;
+    margin: 0px;
+    
+   
+    
+    
+}
+.accept{
+    background-color: #9fc5f8;
+   
+    height: 30px;
+    width: 100px;
+    margin-left: 200px;
+}
+    
+    
+
+article{
+    margin-left: 50PX;
+    
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="title">
+            DojoWeather
+        </h1>
+
+        <div class="link-header">
+            <a href="#" onclick="alert('Loading whether report')">Burbank</a>
+            <a href="#" onclick="alert('Loading whether report')">chicago</a>
+            <a href="#" onclick="alert('Loading whether report')">Dallas</a>
+        </div>
+
+    </header>
+    <div class="temp-head">
+        <h2 class="temp-title">Saa Jose</h2>
+        <div class="convert-temp">
+            <label for="c" style="font-weight: 500;">show temperature in</label>
+            <select   onchange="convert(this)">
+                <option value="c">°c</option>
+                <option value="f">°f</option>
+
+            </select>
+        </div>
+
+
+    </div>
+    <div class="pic">
+        <figure>
+            <h3>Today</h3>
+            <img src="assets\some_rain.png" alt="some rain">
+            <figcaption>
+                some rain
+            </figcaption>
+            <div class="temp">
+                <p class="max">°<span class="max1" value="24">24</span></p>
+                <p class="min">°<span class="min1">18</span></p>
+            </div>
+        </figure>
+        <figure>
+            <h3>Tomorrow</h3>
+            <img src="assets\some_sun.png" alt="some rain">
+            <figcaption>
+                some sun
+            </figcaption>
+            <div class="temp">
+                <p class="max">°<span class="max2">27</span></p>
+                <p class="min">°<span class="min2">19</span></p>
+            </div>
+        </figure>
+        <figure>
+            <h3>Friday</h3>
+            <img src="assets\some_clouds.png" alt="some rain">
+            <figcaption>
+                some clouds
+            </figcaption>
+            <div class="temp">
+                <p class="max">°<span class="max3">21</span></p>
+                <p class="min">°<span class="min3">16</span></p>
+            </div>
+        </figure>
+        <figure>
+            <h3>Saturday</h3>
+            <img src="assets\some_sun.png" alt="some rain">
+            <figcaption>
+                some sun
+            </figcaption>
+            <div class="temp">
+                <p class="max">°<span class="max4">26</span></p>
+                <p class="min">°<span class="min4">21</span></p>
+            </div>
+        </figure>
+    </div>
+    <div class="cookie">
+       <img src="assets\cookie.png" alt="cookie">
+       <article>
+        <h2>stop! cookie time</h2>
+        <p>We use cookies (sadly not the edible ones) to personalize<br>
+            content and ads. to provide social media features and to<br>
+            analyse our traffc.<a href="#"> Read more...</a></p>
+       </article>
+       <button class="accept" onclick="remove()">I Accept</button>
+    </div>
+    <script src="js.js"></script>
+</body>
+
+</html>
