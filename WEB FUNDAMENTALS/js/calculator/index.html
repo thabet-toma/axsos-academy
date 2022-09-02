@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="calculator">
+        <div id="display">0</div>
+        <div class="row">
+          <button onclick="press(7);"class="number">7</button>
+          <button onclick="press(8);"class="number">8</button>
+          <button onclick="press(9);"class="number">9</button>
+          <button class="operator" onclick="setOP('/');">÷</button>
+        </div>
+        <div class="row">
+          <button onclick="press(4);"class="number">4</button>
+          <button onclick="press(5);"class="number">5</button>
+          <button onclick="press(6);"class="number">6</button>
+          <button class="operator" onclick="setOP('*');">×</button>
+        </div>
+        <div class="row">
+          <button onclick="press(1);"class="number">1</button>
+          <button onclick="press(2);"class="number">2</button>
+          <button onclick="press(3);"class="number">3</button>
+          <button class="operator" onclick="setOP('-');">−</button>
+        </div>
+        <div class="row">
+          <button onclick="clr();"class="number">C</button>
+          <button onclick="press(0);"class="number">0</button>
+          <button onclick="press('.');"class="number"> . </button>
+          <button class="operator" onclick="setOP('+');">+</button>
+        </div>
+        <div class="row">
+          <button id="equals" onclick="calculate()">=</div>
+        </div>
+      <div>
+        <script src="js.js"></script>
+      
+</body>
+</html>
