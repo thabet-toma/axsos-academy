@@ -1,0 +1,92 @@
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo
+$ toch index.html
+bash: toch: command not found
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo
+$ touch index.html
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo
+$ touch style.css
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo
+$ cat index.html
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo
+$ sudo gedit index.html
+bash: sudo: command not found
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo
+$ git init
+Initialized empty Git repository in C:/Users/ابداع/Desktop/basic_repo/.git/
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo (master)
+$ git add .
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+        new file:   style.css
+
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo (master)
+$ git commit _m"added html and css files"
+error: pathspec '_madded html and css files' did not match any file(s) known to git
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo (master)
+$ git commit -m"added html and css files"
+[master (root-commit) 6ef9ede] added html and css files
+ 2 files changed, 12 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 style.css
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo (master)
+$ git remote add origin https://github.com/thabet-toma/basic_repo.git
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 448 bytes | 224.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/thabet-toma/basic_repo.git
+ * [new branch]      master -> master
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo (master)
+$ git add .
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo (master)
+$ git commit -m"editing css file"
+[master 0d6af66] editing css file
+ 1 file changed, 3 insertions(+)
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 310 bytes | 310.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/thabet-toma/basic_repo.git
+   6ef9ede..0d6af66  master -> master
+
+ابداع@DESKTOP-9KD6F4G MINGW64 ~/Desktop/basic_repo (master)
+
+
+

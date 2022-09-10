@@ -1,6 +1,8 @@
+// This function will do ....
 function remove(){
     document.querySelector(".cookie").remove()
 }
+
 x=document.querySelector
 var max=[document.querySelector(".max1").innerText,document.querySelector(".max2").innerText,document.querySelector(".max3").innerText,document.querySelector(".max4").innerText]
 var min=[document.querySelector(".min1").innerText,document.querySelector(".min2").innerText,document.querySelector(".min3").innerText,
@@ -12,6 +14,7 @@ var min2=[(min1[0]*(9/5)+32),(min1[1]*(9/5)+32),(min1[2]*(9/5)+32),(min1[3]*(9/5
 
 
 function convert(elm){
+    var tempRate = 1.8;
     for(var i=0;i<4;i++){
         if(elm.value=='f'){
             document.querySelector(".max"+(i+1)).innerText=Math.floor(max1[i]*(9/5)+32)

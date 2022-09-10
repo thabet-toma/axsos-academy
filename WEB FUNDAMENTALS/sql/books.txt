@@ -1,0 +1,31 @@
+INSERT INTO authors ( author_name,created_at,updated_at) 
+vALUES ("Jane Austen",now(),now());
+INSERT INTO authors ( author_name,created_at,updated_at) 
+vALUES ("Emily Dickinson",now(),now());
+
+INSERT INTO authors ( author_name,created_at,updated_at) 
+vALUES ("Fyodor Dostoevsky",now(),now());
+INSERT INTO authors ( author_name,created_at,updated_at) 
+vALUES ("William Shakespeare",now(),now());
+
+INSERT INTO authors ( author_name,created_at,updated_at) 
+VALUES (" Lau Tzu",now(),now());
+INSERT INTO books ( book_title,num_of_pages,created_at,updated_at) 
+VALUES (" C Sharp",300,now(),now());
+INSERT INTO books ( book_title,num_of_pages,created_at,updated_at) 
+VALUES (" JAVA",300,now(),now());
+INSERT INTO books ( book_title,num_of_pages,created_at,updated_at) 
+VALUES (" Python",300,now(),now());
+INSERT INTO books ( book_title,num_of_pages,created_at,updated_at) 
+VALUES (" php",300,now(),now());
+INSERT INTO books ( book_title,num_of_pages,created_at,updated_at) 
+VALUES (" Ruby",300,now(),now());
+update books set book_title="c#" where id=1;
+update authors set author_name="Bill Shakespeare"where id=4;
+INSERT INTO favorites (book_id,author_id) values(1,1);
+INSERT INTO favorites (book_id,author_id) values(2,1);
+
+INSERT INTO favorites (book_id,author_id) values(1,2);
+INSERT INTO favorites (book_id,author_id) values(2,2);
+INSERT INTO favorites (book_id,author_id) values(3,2);
+

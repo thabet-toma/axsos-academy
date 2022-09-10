@@ -1,0 +1,38 @@
+insert into dojos (first_name , last_name , Age ) Values ('AHMED' , 'YASSIN' , '43' ) ;
+insert into dojos (first_name , last_name , Age ) Values ('AMJAD' , 'YASSIN' , '23' ) ;
+insert into dojos (first_name , last_name , Age ) Values ('AYMAN' , 'YASSIN' , '33' ) ;
+----------------------------------------
+SELECT * FROM DOJOS ;
+----------------------------------------
+SET SQL_SAFE_UPDATES = 0;
+
+delete from dojos  ; 
+----------------------------------------
+insert into dojos (first_name , last_name  ) Values ('thabet' , 'toma' , '43' ) ;
+insert into dojos (first_name , last_name , Age ) Values ('fadi' , 'hasan' , '23' ) ;
+insert into dojos (first_name , last_name , Age ) Values ('yami' , 'soul' , '33' ) ;
+----------------------------------------
+insert into ninjas (first_name , last_name , age , dojo_id ) Values ('AHMED' , 'YASSIN' , '43' , 1 ) ;
+insert into ninjas (first_name , last_name , age , dojo_id ) Values ('khaled' , 'YASSIN' , '23' , 1 ) ;
+insert into ninjas (first_name , last_name , age , dojo_id ) Values ('rama' , 'hasan' , '33' , 1 ) ;
+select * from dojos ; 
+select * from ninjas ; 
+----------------------------------------
+insert into ninjas (first_name , last_name , age , dojo_id ) Values ('rama' , 'sameh' , '13' , 2 ) ;
+insert into ninjas (first_name , last_name , age , dojo_id ) Values ('tmara' , 'rani' , '23' , 2 ) ;
+insert into ninjas (first_name , last_name , age , dojo_id ) Values ('yoro' , 'sali' , '43' , 2 ) ;
+select * from ninjas ; 
+----------------------------------------
+insert into ninjas (first_name , last_name , age , dojo_id ) Values ("google' , 'YASSIN' , '19' , 3 ) ;
+insert into ninjas (first_name , last_name , age , dojo_id ) Values ('thapet' , 'YASSIN' , '44' , 3 ) ;
+insert into ninjas (first_name , last_name , age , dojo_id ) Values ('hassan' , 'tome' , '22' , 3 ) ;
+select * from ninjas ; 
+----------------------------------------
+Select * from ninjas  where dojo_id = 1 ;
+----------------------------------------
+Select * from ninjas where dojo_id = 3 ;
+----------------------------------------
+SELECT dojo_id FROM ninjas where id = 9 ; 
+or
+SELECT dojo_id FROM ninjas where id = last_insert_id() ; 
+
