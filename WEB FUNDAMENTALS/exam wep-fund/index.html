@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container"></div>
+    <h1 class="title">FREE PHONE GRIP ON SELECT PURCHASES</h1>
+    <div class="search">
+        <h2>PlushStar</h2>
+        <input type="search" name="search" id="search" placeholder="Search">
+        <figure>
+            <p>0</p>
+            <img src="images\cart-dark.png" alt="cart-dark">
+        </figure>
+    </div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">New</a>
+        <a href="#" class="selected">Products</a>
+        <a href="#">Sales</a>
+        <a href="#">Blog</a>
+        <a href="#" onclick="messageAlertContact()">Contact Us</a>
+    </nav>
+    <h1>Plushy Store</h1>
+    <div class="sort">
+        <p>62 Products, sorted by<span> Best Selling</span></p>
+        <div class="sort-bar">
+            <label for="sort">Sort By</label>
+            <select name="sort" id="sort" onchange="sortProduct(this)">
+                <option>Best Selling</option>
+                <option>Price</option>
+                <option>Date</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="figures">
+        <figure>
+            <img src="images\product-image.png" alt="product-imge">
+            <figcaption>Mischief Mouse</figcaption>
+            <button onclick="increaseItemCart()">BUY</button>
+        </figure>
+        <figure>
+            <img src="images\product-image.png" alt="product-imge">
+            <figcaption>Shy Shrew</figcaption>
+            <button onclick="increaseItemCart()"> BUY</button>
+        </figure>
+        <figure>
+            <img src="images\product-image.png" alt="product-imge">
+            <figcaption> Hangry Hamster</figcaption>
+            <button onclick="increaseItemCart()">BUY</button>
+
+        </figure>
+        <figure>
+            <img src="images\product-image.png" alt="product-imge">
+            <figcaption> Chilly Chinchilla</figcaption>
+            <button onclick="increaseItemCart()">BUY</button>
+
+        </figure>
+    </div>
+    </div>
+    <script src="js.js"></script>
+</body>

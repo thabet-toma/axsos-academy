@@ -1,0 +1,72 @@
+
+-- 1-Create 6 new users
+INSERT INTO users (first_name,last_name,created_at,updated_at) 
+values ("thabet","toma",now(),now()),
+("khaled","ammar",now(),now()),
+ ("raed","toma",now(),now()),
+ ("ahmad","toma",now(),now()),
+ ("mahmoud","toma",now(),now()),
+  ("fares","toma",now(),now());
+  -- 2-Have user 1 be friends with user 2, 4 and 6
+  INSERT INTO frinship (created_at,updated_at,id,users_id,friend_id)
+  values(now(),now(),1,1,2),
+   (now(),now(),2,1,4),
+    (now(),now(),3,1,6);
+-- 3 Have user 2 be friends with user 1, 3 and 5
+ INSERT INTO frinship (created_at,updated_at,id,users_id,friend_id)
+  values(now(),now(),4,2,1),
+   (now(),now(),5,2,3),
+    (now(),now(),6,2,5);
+    -- 4 Have user 3 be friends with user 2 and 5
+    INSERT INTO frinship (created_at,updated_at,id,users_id,friend_id)
+  values(now(),now(),7,3,2),
+   (now(),now(),8,3,5);
+   -- 5 Have user 4 be friends with user 3
+    INSERT INTO frinship (created_at,updated_at,id,users_id,friend_id)
+  values(now(),now(),9,4,3);
+  -- 6 Have user 5 be friends with user 1 and 6
+  INSERT INTO frinship (created_at,updated_at,id,users_id,friend_id)
+  values(now(),now(),10,5,1),
+   (now(),now(),11,5,6);
+   -- 7-Have user 6 be friends with user 2 and 3
+   INSERT INTO frinship (created_at,updated_at,id,users_id,friend_id)
+  values(now(),now(),12,6,2),
+   (now(),now(),13,6,3);
+   -- 8 Display the relationships create as shown in the above image
+   SELECT users.first_name,users.last_name,
+   users2.first_name as friend_first_name,
+   users2.last_name as friend_last_name FROM users join frinship on users.id=frinship.users_id
+   join users as users2 on users2.id=frinship.friend_id;
+ 
+   -- 9-Return all users who are friends with the first user, make sure their names are displayed in results.
+   SELECT users.first_name,users.last_name,
+   users2.first_name as friend_first_name,
+   users2.last_name as friend_last_name FROM users join frinship on users.id=frinship.users_id
+   join users as users2 on users2.id=frinship.friend_id  WHERE users.id=1;
+   -- 10 Return the count of all friendships
+   SELECT COUNT(id) from frinship;
+   -- 11  Find out who has the most friends and return the count of their friends.
+   SELECT users.first_name,users.last_name,
+  count( users2.first_name) as friends_number
+    FROM users join frinship on users.id=frinship.users_id
+   join users as users2 on users2.id=frinship.friend_id  group by users.id;
+   SELECT users.first_name,users.last_name,
+   users2.first_name as friend_first_name,
+   users2.last_name as friend_last_name FROM users join frinship on users.id=frinship.users_id
+   join users as users2 on users2.id=frinship.friend_id  WHERE users.id=1;
+   -- 12 Return the friends of the third user in alphabetical order
+   SELECT users.first_name,users.last_name,
+   users2.first_name as friends_first_name, users2.last_name as friends_last_name
+    FROM users join frinship on users.id=frinship.users_id
+   join users as users2 on users2.id=frinship.friend_id where users.id =3 order by users2.first_name 
+   
+   
+   
+   
+  
+   
+    
+
+  
+ 
+ 
