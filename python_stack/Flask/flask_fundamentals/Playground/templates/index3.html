@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .nice_block{
+        margin-top: 40px;
+        width: 100%;
+        text-align: center;
+        
+        
+
+            }
+.nice_block div{
+    width:200px;
+    margin: 10px;
+    height: 150px;
+    
+    display: inline-block;
+    background-color: {{color1}};     
+}
+    </style>
+</head>
+<body>
+    <h1 style="margin:0 auto ;text-align: center;">welcome</h1>
+    <div class="nice_block">
+
+        
+        {%for i in range(num):%}
+        <div>  </div>
+        {%endfor%}
+
+        
+
+    </div>
+</body>
+</html>
