@@ -1,0 +1,36 @@
+.search{
+    color: rgb(0, 255, 221);
+    border: 1px solid aqua;
+    font-size: 150%;
+    width: 150px;
+    border-radius: 40%;
+    height: 40px;
+    
+    margin: 10px;
+    
+    
+}
+.plus{color:white;
+    background-color: aquamarine;
+    border: 1px solid aqua;
+    font-size: 150%;
+    width: 40px;
+    border-radius: 80%;
+    height: 40px;
+    
+    margin: 10px;
+    
+
+}
+.create{
+    color: white;
+    background-color: blue;
+    border: 3px solid black;
+    font-size: 150%;
+    width: 250px;
+    
+    height: 60px;  
+    margin: 10px;
+    box-shadow: 5px 5px black;
+    
+}

@@ -1,0 +1,27 @@
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.col{
+    height: 40px;
+    width:200px;
+    background-color: #5f9fa0;
+    margin:10px ;
+    flex:1;
+}
+.col-2{
+    height: 40px;
+    width: 200px;
+    background-color: #5f9fa0;
+    margin: 10px;
+    flex: 2;
+}
+.col-3{
+    height: 40px;
+    width: 200px;
+    background-color: #5f9fa0;
+    margin: 10px;
+    flex: 3;
+}

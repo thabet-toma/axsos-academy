@@ -1,0 +1,25 @@
+.nav{
+    height: 40px;
+    background-color: #2a2a2a;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right:20px ;
+}
+
+.nav-title{
+    color: white;
+    
+}
+.nav-links{  
+    display: flex;
+    
+}
+li{
+    margin: 15px;
+}
+a{
+    color:white;
+    text-decoration: none;
+}

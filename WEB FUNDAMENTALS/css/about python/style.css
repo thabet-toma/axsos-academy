@@ -1,0 +1,168 @@
+
+main{
+    width:970px;
+    background-color: #245076;
+    position: relative;
+    padding-right: 0px;
+    margin: 0px;
+    padding-bottom: 3px;
+}
+.python-img{
+width: 350px;
+display: inline;
+margin-top: 15px;
+margin-left: 15px;
+}
+.font-weight{
+    display: inline;
+    text-align: right;
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    margin-top: 0px;
+    color:white ;
+    margin-right: 30px;
+}
+.font-weight a{
+    color: #a7991b;
+}
+.search-bar{
+    width:250px;
+    height: 50px;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    background-color: #444444;
+  border-radius: 15px;
+    text-align: center;   
+
+}
+.go-search{
+    margin-top: 15px;
+}
+#go{
+    background-color: #245076;
+    border-radius: 4px;
+    color: white;
+}
+
+nav ul{
+    display: flex;
+    background-color: #407bad;
+    height: 30px;
+    width:800px;
+    
+    justify-content: space-around;
+    margin: 0 auto;
+    list-style-type:none ;
+    padding-left: 0px;
+    align-items: center;
+    border-radius: 5px;
+    
+   
+}
+nav ul a{
+    text-decoration:none ;
+    color: white;
+}
+aside{
+   display: flex;
+   flex-direction: column;
+    margin-left: 140px;
+    margin-top: 30px;
+    
+}
+.topic{
+    display: flex;
+}
+aside a{
+    margin:4px;
+    color: white;
+}
+
+.article-par{
+    color:white;
+    text-align: center;
+}
+.topic-right{
+    margin-left: 30px;
+}
+
+.topic-right-bottom{
+    color:#f0cd34;
+   text-align: center;
+   font-style: italic;
+}
+.zen{
+    text-align: center;
+    color: white;
+}
+.footer{
+    background-color:#ffffff;
+    padding-top: 10px;
+    display: flex;
+    
+    
+}
+.half-footer{
+    margin-left: 120px;
+    padding-top: 0px;;
+   margin-top: 0px;
+   border-top: 2px solid #245076 ;
+   width: 400px;
+   text-align: center;
+   
+   
+    
+}
+.half-footer p{
+    margin-bottom: 0px;
+}
+.link-footer{
+    color: #91bade;
+}
+.half-footer ul{
+    list-style-type:square ;
+    color: black;
+    
+    margin-left: 45px;
+    margin-top: 5px;
+    
+    
+}
+    
+.half-footer a{
+    color: #91bade;
+    text-decoration: none;
+    padding: 0px;
+    
+}
+#right-footer{
+    margin-left:40px;
+    width:500;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    
+   
+
+}
+.contact a{
+    color: #87b9e5;
+    text-decoration: none;
+    margin-right: 40px;
+    margin-top: 40px;
+
+}
+.copy-right{
+    color: #87b9e5;
+    text-align: center;
+    font-size: 10px;
+
+}
+.half-footer li{
+   width: 240px;
+}
+
+

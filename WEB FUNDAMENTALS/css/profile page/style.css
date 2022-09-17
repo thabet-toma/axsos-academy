@@ -1,0 +1,276 @@
+/*{
+    outline: 1px solid red;
+}!-->*/
+.nav{
+    height: 40px;
+    background-color: #2a2a2a;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right:20px ;
+    padding-top: 0px;
+    position: relative;
+}
+
+.nav-title{
+    color: white;
+    margin-left: 200px;
+    
+    
+}
+.nav-links{  
+    display: flex;
+    position: absolute;
+    left: 300px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    
+}
+li{
+    margin: 15px;
+}
+.nav a{
+    color:white;
+    text-decoration: none;
+}
+.container{
+  display: flex; 
+  width: 900px;
+ 
+  padding-right: 150px;
+  padding-left: 150px;
+  height: 100%;
+  justify-content: space-between;
+}
+.left{
+    width: 500px;
+    height: 100%;
+}
+.user-card{
+    width:400px;
+    height:350px;
+    border-left: 4px solid gray;
+    border-bottom: 4px solid gray;
+    border-right: 4px solid gray;
+    position: relative;
+    margin-top: 20px;
+
+}
+
+.top{
+    background-color:#17a2b8;
+    height: 70px;
+
+}
+.pic{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    border: 3px solid gray;
+    border-radius: 50%;
+}
+.user-card h1{
+    margin-top: 60px;
+    margin-left: 0px
+
+
+}
+.location{
+    width:90px;
+    height:70px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top:-20px;
+    
+    align-items: center;
+    
+    
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    
+}
+.link{
+    height: 40px;
+    width:100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.education-header{
+    
+    height: 35px;
+    background-color: #333333;
+    padding-left: 10px;
+    color: white;
+    padding-top: 10px;
+    
+
+}
+.education-content{
+    margin: 0px;
+    padding: 0px;
+}
+.education{
+    width:400px;
+    height:200px;
+    padding-top: 10px;
+    
+
+
+}
+  
+
+.right {
+width: 300px;
+height:600px;
+margin-right: 10px;
+
+}
+.connection{
+    height: 30%;
+    width: 260px;
+    margin: 20px;
+    
+}
+
+.connection-header{
+    background-color: #333333;
+    width:257px;
+    padding-left: 5px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    height: 30px;
+    
+    
+    
+}
+.connection-request{
+    color:white;
+    margin: 0;
+    
+    
+}
+.connection-number{
+    background-color: #cccccc;
+    border: 1px solid #333333;
+    height: 8px;
+    border-radius: 50%;
+    font-size: 15px;
+    margin-right: 10px;
+    padding: 6px;
+    margin-left: 8px;
+   
+}
+    
+    
+
+.first-request{
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+}
+.first-request img{
+    height: 35px;
+    
+}
+.tod-pic{
+    margin: 10px;
+}
+.close-sign{
+    position:absolute;
+    right:6px;
+}
+.accept-sign{
+    position: absolute;
+    right: 45px;
+}
+.second-request{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.second-request img{
+    height:35px
+}
+.connection-content{
+    border: 3px solid #cccccc;
+    width: 257px;}
+.phil-pic{
+    margin: 10px;
+}
+.your-connection-block{
+    height: 60%;
+    margin: 50px;
+    margin-left: 20px;
+}
+.your-connection-header{
+    background-color: #333333;
+    height: 40px;
+    width: 262px;
+    padding-top:10px;
+    padding-right: 0px;
+    
+}
+.your-connection-header-content{
+    color: white;
+    margin: 0px;
+
+}
+.your-connection-number{
+    background-color: #cccccc;
+    border: 1px solid #333333;
+    height: 10px;
+    border-radius: 40%;
+    font-size: 15px;
+    margin-right: 10px;
+    padding: 6px;
+    margin-left: 8px;
+}
+.your-connection-list{
+    width: 256px;
+    height: 250px;
+    border: 3px solid #cccccc;
+    padding-right: 0px;
+    height: 212px;
+    
+}
+.your-connection-list img{
+    height: 35px;
+    margin: 10px;
+    
+}
+.your-connection-list-content{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    margin-right: 0px;
+    
+    
+
+}
+.link-connection {
+width: 256px;
+border: 3px solid #cccccc;
+margin:0px ;
+padding-bottom: 5px;
+border-top: 0px;
+text-decoration: none;
+
+    
+}
+.link-connection a{
+    margin:7px;
+}
+.education-desc{
+    border: 3px solid #cccccc;
+}
