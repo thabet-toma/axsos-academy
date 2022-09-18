@@ -1,0 +1,17 @@
+.row{
+    display:flex;
+    width:800px;
+   
+
+}
+.row .white{
+    background-color: #ff0000;
+    
+    height: 50px;
+    width:50px
+}
+.row .black{
+    background-color: black;
+    height: 50px;
+    width:50px
+}
