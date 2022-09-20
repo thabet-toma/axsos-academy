@@ -1,0 +1,16 @@
+.p1{
+    border: 2px solid black;
+    width:200px;
+    margin:0 auto;
+    height: 45px;
+    text-align: center;
+    margin-top: 40px;
+}
+div{
+    border: 2px solid black;
+    width:800px;
+    margin:0 auto;
+   
+    text-align: center;
+    margin-top: 40px;
+} 
