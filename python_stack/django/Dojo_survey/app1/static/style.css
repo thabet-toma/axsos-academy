@@ -1,0 +1,35 @@
+form{
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid black;
+    margin-top: 10%;
+    padding-left: 30px;
+    
+    
+    
+}
+form div{
+    display: flex;
+    margin: 15px;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    
+}
+.comment{
+    display: block;
+}
+p{
+    font-weight: bold;
+}
+button{
+    color: white;
+    background-color: #76a5af;
+    width: 70px;
+    margin-right: 20px;
+    
+}
+.bu{
+    text-align: right;
+}

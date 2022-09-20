@@ -1,0 +1,20 @@
+.conatiner{
+    width: 60%;
+    margin: 0 auto;
+    border: 2px solid black;
+    height: 500px;
+    
+}
+.conatiner div{
+    display: flex;
+    margin-left: 30px;
+
+   
+
+}
+div p{
+    margin-right: 50px;
+}
+h2{
+    margin-left:25px
+}
