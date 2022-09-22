@@ -2,7 +2,7 @@ form{
     width: 50%;
     margin: 0 auto;
     border: 2px solid black;
-    margin-top: 10%;
+    
     padding-left: 30px;
     
     
@@ -11,6 +11,7 @@ form{
 form div{
     display: flex;
     margin: 15px;
+    justify-content: space-between;
     align-items: center;
     
     

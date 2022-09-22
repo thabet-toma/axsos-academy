@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        table{
+           
+            margin: 0 auto;
+        }
+        .col{
+            background-color: #eeeeee;
+        }
+        .no{
+            background-color: white;
+        }
+    </style>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>All the users</h1>
+    <table border="1">
+        <thead>
+            <tr>
+            <th>ID</td>
+            <th style="width:200px; text-align: left;">NAME</td>
+            <th  style="width:200px; text-align: left;">Email</td>
+            <th>Age</td>
+            </tr>
+            
+            {%for rows   in all_users %}
+            
+
+            <tr class="col">
+                <td>{{rows.id}}</td>
+                <td>{{rows.first_name}} {{rows.last_name}} </td>
+                <td>{{rows.email_address}}</td>
+                <td>{{rows.age}}</td>
+            </tr>
+            {%endfor%}
+           
+        </thead>
+       
+        
+
+        
+    </table>
+    <h1>Add a user </h1>
+    <form action="process/" method="post">
+        {% csrf_token %}
+    <div>
+        <label for="firstName">first name</label>
+        <input type="text" name="firstName" style="width: 100px;height: 30px;">
+        <label for="lastName">last name</label>
+        <input type="text" name="lastName" style="width: 100px;height: 30px;">
+
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="text" name="email" style="width: 100px;height: 30px;">
+        <label for="age">Age</label>
+        <input type="text" name="age" style="width: 100px;height: 30px;">
+    </div>
+    <button type="submit">Add</button>
+    
+
+</form>
+</body>
+</html>
