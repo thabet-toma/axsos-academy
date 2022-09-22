@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+            text-align: center;
+        }
+        button{
+            display: block;
+            margin: 0 auto;
+            margin-top: 5px;
+        
+        }
+        input{
+            margin-top:20px ;
+        }
+        .low,.height {
+        background-color: #cf2a27; 
+        color: white; 
+        width:150px;
+        height: 25px;
+        text-align: center;
+        margin: 0 auto;
+        
+        padding:12%  ;
+        }
+        
+        
+        .correct{
+            background-color:#009e0f;
+            width:150px;
+        height: 25px;
+        text-align: center;
+        margin: 0 auto;
+        
+        padding:12%  ;
+        }
+     
+    </style>
+</head>
+<body style="width:100%">
+    <div class="con">
+    <h1>Welcome to the Great Number Game!</h1>
+    <p>I am of a number between 1 and 100</p>
+    <p>Take a guess</p>
+    
+    {%if  "height" in p1 %}
+    <div class="height" >{{p1}}</div>
+    {% elif "low" in p1  %}
+    <div class="low" >{{p1}}</div>
+    {%elif "was" in p1 %}
+    <div class="correct" >{{p1}}</div>
+    {%endif%}
+    
+    <form action="/guess" method="post">
+        {%csrf_token%}
+    <input type="text" name='text'>
+    <button type="submit">submit</button>
+</form>
+    </div>
+<p>{{x1}}</p> 
+</body>
+</html>
