@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .headyourgold {
+            display: flex;
+            align-items: center;
+        }
+
+        .yourgold {
+
+            font-weight: bolder;
+            margin: 30px;
+        }
+
+        .yourgold1 {
+            border: 1px solid black;
+            width: 80px;
+
+            height: 30px;
+
+        }
+        .main{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .main div{
+            border: 2px solid black;
+            width: 200px;
+            text-align: center;
+        }
+        .main div *{
+            margin: 30px;
+        }
+        .textarea{
+            border: 2px solid black;
+            margin: 30px;
+            height: 120px;
+            margin-right: 100px;
+            overflow: scroll;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="headyourgold">
+        <p class="yourgold">Your Gold:</p>
+        <p class="yourgold1">{{request.session.x}}</p>
+    </div>
+    <div class="main">
+        <div>
+            <p style="font-weight:bold ;">farm</p>
+            <p>(earns 10-20 gold)</p>
+            <!-- <form action="process_money/" method="post">
+                {%csrf_token%}
+                <input type="hidden" name="which_form" value="farm"> -->
+                <a href="/process_money/farm">
+                    <button>find gold!</button>
+                </a>
+        </div>
+        <div>
+            <p style="font-weight:bold ;">Cave</p>
+            <p>(earns 10-20 gold)</p>
+            <!-- <form action="process_money/" method="post">
+                {%csrf_token%}
+                <input type="hidden" name="which_form" value="cave"> -->
+                <a href="/process_money/cave">
+                    <button>find gold!</button>
+                </a>>
+        </div>
+        <div>
+            <p style="font-weight:bold ;">House</p>
+            <p>(earns 10-20 gold)</p>
+            <!-- <form action="process_money/" method="post">
+                {%csrf_token%} -->
+                <!-- <input type="hidden" name="which_form" value="house"> -->
+                <a href="/process_money/Hoce">
+                    <button>find gold!</button>
+                </a>>
+        </div>
+        <div>
+            <p style="font-weight:bold ;">Quest</p>
+            <p>(earns 0-50 gold)</p>
+            <!-- <form action="process_money/" method="post">
+                {%csrf_token%}
+                <input type="hidden" name="which_form" value="quest"> -->
+            <a href="/process_money/Quest">
+                <button>find gold!</button>
+            </a>
+            
+        </div>
+        
+    </div>
+    <p style="font-weight: bold;margin-left: 30px;">Activities</p>
+    <div class="textarea">
+        {%for i,j,k,m in request.session.loc reversed %}
+        {%if k == 'lost'%}
+    
+        <p style="color:red ;">You entered a {{i}} ond {{j}} {{k}} gold. ({{m}})</p>
+        {%else%}
+        <p style="color:green ;">You entered a {{i}} ond {{j}} {{k}} gold. ({{m}})</p>
+        
+        {%endif%}
+        
+        {%endfor%}
+    </div>
+
+</body>
+
+</html>
