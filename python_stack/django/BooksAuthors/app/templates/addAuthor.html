@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        form {
+            display: flex;
+
+
+        }
+
+        .label {
+            display: flex;
+            flex-direction: column;
+
+            margin: 20px;
+        }
+
+        .label * {
+            margin: 15px;
+        }
+
+        input {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="left">
+            <h1 style="margin-left:80px ;">Add a Author</h1>
+            <form action="/addAuthor" method="post">
+                {%csrf_token%}
+                <div class="label">
+                    <label>first name</label>
+                    <label>last name</label>
+                    <label>notes</label>
+                </div>
+                <div class="label">
+                    <input type="text" name="first_name">
+                    <input type="text" name="last_name">
+                    <input type="text" name="notes">
+                    <button type="submit" style="width:70px">Add</button>
+                </div>
+            </form>
+        </div>
+        <table border="1" style="background-color: #eeeeee;">
+            <thead>
+                <th>ID</th>
+                <th style="width:180px; text-align: start;">Name</th>
+                <th style="width:60px; text-align: start;">Action</th>
+
+            </thead>
+            {%for a in all_author%}
+            <tr>
+                <td style="height:35px ;">{{a.id}}</td>
+                <td style="height:35px ;">{{a.first_name}} {{a.last_name}}</td>
+                <td style="height:35px ;"><a href="views/author/{{a.id}}">views</a></td>
+            </tr>
+            {%endfor%}
+    </main>
+</body>
+
+</html>

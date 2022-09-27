@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        form{
+            display: flex;
+            
+            
+        }
+        .label{
+            display: flex;
+            flex-direction: column;
+            
+            margin: 20px;
+        }
+        .label *{
+            margin: 15px;
+        }
+        input{
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+<div class="left">
+    <h1 style="margin-left:80px ;">Add a Book</h1>
+    <form action="/addBook" method="post">
+        {%csrf_token%}
+        <div class="label">
+        <label >Title</label>
+        <label >Description</label>
+    </div>
+        <div class="label">
+        <input type="text" name="title">
+        <input type="text" name="desc">
+        <button type="submit" style="width:70px">Add</button>
+    </div>
+    </form>
+</div>
+<table border="1" style="background-color: #eeeeee;">
+    <thead>
+       <th>ID</th>
+       <th style="width:180px; text-align: start;">Name</th>
+       <th style="width:60px; text-align: start;" >Action</th>
+
+    </thead>
+    {%for bk in all_books%}
+    <tr>
+        <td style="height:35px ;">{{bk.id}}</td>
+        <td style="height:35px ;">{{bk.title}}</td>
+        <td style="height:35px ;"><a href="views/{{bk.id}}">views</a></td>
+    </tr>
+    {%endfor%}
+    </main>
+</body>
+</html>
