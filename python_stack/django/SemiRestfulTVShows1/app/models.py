@@ -24,9 +24,10 @@ class ShowsManager(models.Manager):
         d=x[8]+x[9]
         if  int(y1)> int(strftime ("%Y")):
             errors["date"] = "date description should be at least 10 characters"
-            if int(m)> int(strftime ("%m")):
-                if int(d)>int(strftime ("%d")):
-                    errors["date"] = "date description should be at least 10 characters"
+        if int(m)> int(strftime ("%m")):
+            errors["date"] = "date description should be at least 10 characters"
+        if int(d)>int(strftime ("%d")):
+                errors["date"] = "invalid date "
             
         return errors
 
