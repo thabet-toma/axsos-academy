@@ -19,6 +19,13 @@
 <body>
     <h1 style="display: inline-block ;margin-left: 30px;">Add a new Show</h1>
     <a href="/shows/">Go Back</a>
+    {% if messages %}
+<ul class="messages">    
+    {% for message in messages %}    
+        <li>{{ message }}</li>    
+    {% endfor %}
+</ul>
+{% endif %}
     <form action="/addProcess" method="post">
         {%csrf_token%}
     <p style="margin: 30px">Title</p>
@@ -32,7 +39,7 @@
 </div>
 </div>
 <p style="margin-left: 30px;">Description</p>
-    <textarea name="desc"  cols="47" rows="7" style="margin-left: 30px;"> </textarea>
+    <textarea name="desc"  cols="47" rows="7" style="margin-left: 30px;"></textarea>
     <button type="submit" style="margin-left: 100px; display: block;">Create</button>
 </form>
 
