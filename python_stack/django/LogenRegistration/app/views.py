@@ -20,10 +20,12 @@ def regs(request):
         hash=bcrypt.hashpw(request.POST['password'].encode(), bcrypt.gensalt()).decode()
         Users.objects.create(first_name=request.POST['fname'],last_name=request.POST['lname'],email=request.POST['email'],password=hash)
         request.session['user']=Users.objects.last().first_name
+        request.session['state']='registered'
         return redirect('/success1')
 def success1(request):
     if 'user' in request.session:
-        return render(request,'success.html')
+        context={'last':Users.objects.last()}
+        return render(request,'success.html',context)
     else:
         return redirect('/') 
 def login(request):
@@ -38,6 +40,7 @@ def login(request):
         if bcrypt.checkpw(request.POST['password'].encode(), logged_user.password.encode()):
             # if we get True after checking the password, we may put the user id in session
             request.session['user'] = logged_user.first_name
+            request.session['state']='logged in'
             # never render on a post, always redirect!
             return redirect('/success1')
         else:
