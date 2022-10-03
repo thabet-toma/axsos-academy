@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: #2b78e4;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <a href="/logout">logout</a>
+    <p>post a message</p>
+    <form action="/wall/post" method="post">
+        {%csrf_token%}
+    <textarea name="post" id="" cols="70" rows="5" style="display:block ;"></textarea>
+    <button type="input">post a message</button>
+</form>
+    {%if msgs%}
+    {%for m in msgs%}
+    <div>
+
+    
+    <h3>{{m.user.first_name}} {{m.created_at}}</h3>
+<p style="font-weight:bold ; border: 1px solid red;width: 50vw;">{{m.message}}</p>
+<div>
+<h3 style="font-size:bold; color:blueviolet ;">comments</h3>
+{%if m.comment%}
+{%for c in m.comment.all%}
+<p style="font-weight:bold ;">{{c.created_at}}</p> 
+
+<p>{{c.user.first_name}} :{{c.comment}}</p>
+</div>
+{%endfor%}
+{%endif%}
+<form action="/wall/comment" method="post">
+    {%csrf_token%}
+    <p>post a comment</p>
+    <textarea name="comment" id="" cols="70" rows="5" style="display:block ;"></textarea>
+    <button name="com" type="input" value="{{m.message}}">post a comment</button>
+
+</form>
+    
+</div>
+{%endfor%}
+    {%endif%}
+</body>
+</html>

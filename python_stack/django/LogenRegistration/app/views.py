@@ -41,8 +41,9 @@ def login(request):
             # if we get True after checking the password, we may put the user id in session
             request.session['user'] = logged_user.first_name
             request.session['state']='logged in'
+            request.session['Uid']=logged_user.id
             # never render on a post, always redirect!
-            return redirect('/success1')
+            return redirect('/wall')
         else:
             messages.error(request, 'invalid email or password')
             return redirect("/")

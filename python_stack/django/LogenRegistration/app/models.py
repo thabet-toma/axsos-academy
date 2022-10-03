@@ -1,6 +1,8 @@
 from distutils.log import error
 import email
 from tkinter.tix import Tree
+from venv import create
+from xml.etree.ElementTree import Comment
 from django.db import models
 import re
 
@@ -38,5 +40,18 @@ class Users(models.Model):
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
     objects=UserManager()
+
+class Messages(models.Model):
+    message=models.TextField()
+    user=models.ForeignKey(Users, related_name="message", on_delete = models.CASCADE)
+    created_at=models.DateField(auto_now_add=True)
+    created_at=models.DateField(auto_now=True)
+class comments(models.Model):
+    comment=models.TextField()
+    message=models.ForeignKey(Messages, related_name="comment", on_delete = models.CASCADE)
+    user=models.ForeignKey(Users, related_name="comment", on_delete = models.CASCADE)
+    created_at=models.DateTimeField(auto_now_add=True)
+    updated_at=models.DateTimeField(auto_now=True)
+    
 
 # Create your models here.
