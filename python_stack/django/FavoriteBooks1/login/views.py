@@ -52,13 +52,18 @@ def login(request):
     return redirect("/")
 def logout(request):
     del request.session['user']
+    del request.session['Uid']
     return redirect('/')
 def book(request):
-    context={
-        'user':Users.objects.get(id=request.session['Uid']),
-        'allBooks':Books.objects.all()
-    }
-    return render(request,'books.html',context)
+    if 'Uid' in request.session:
+        context={
+            'user':Users.objects.get(id=request.session['Uid']),
+            'allBooks':Books.objects.all()
+        }
+        
+        return render(request,'books.html',context)
+    else:
+        return redirect('/')
 def addbook(request):
     errors = Books.objects.basic_validator(request.POST)
     if len(errors) > 0:
@@ -96,6 +101,8 @@ def edit(request):
     else:
         Books.objects.get(id=request.POST['id']).delete()
         return redirect('/books')
+
+
     
 
 

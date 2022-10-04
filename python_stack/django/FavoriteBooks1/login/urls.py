@@ -13,6 +13,7 @@ urlpatterns = [
     path('addfav/<int:id>',views.addfav),
     path('delfav/<int:id>',views.delfav),
     path('edit',views.edit),
+
    
     
 ]
