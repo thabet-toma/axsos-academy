@@ -52,6 +52,7 @@ def login(request):
     # redirect back to a safe route
     return redirect("/")
 def logout(request):
+    del request.session['Uid']
     del request.session['user']
     return redirect('/')
 
