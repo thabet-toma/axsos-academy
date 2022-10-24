@@ -13,6 +13,7 @@ public class AlfredTest {
         String testGuestGreeting = alfredBot.guestGreeting("Beth Kane");
         String testGuestGreeting1 = alfredBot.guestGreeting("Beth Kane","morning");
         String testDateAnnouncement = alfredBot.dateAnnouncement();
+        String testPeriod = alfredBot.period("thabet");
         
         String alexisTest = alfredBot.respondBeforeAlexis(
                             "Alexis! Play some low-fi beats."
@@ -33,5 +34,6 @@ public class AlfredTest {
         System.out.println(alexisTest);
         System.out.println(alfredTest);
         System.out.println(notRelevantTest);
+        System.out.println(testPeriod);
     }
 }

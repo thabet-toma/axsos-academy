@@ -1,4 +1,7 @@
-import java.util.Date;
+// import java.text.ParseException;  
+import java.text.SimpleDateFormat;  
+import java.util.Date;  
+// import java.util.Locale;  
 public class AlfredQuotes {
     
     public String basicGreeting() {
@@ -39,8 +42,27 @@ public class AlfredQuotes {
         
 
      }
+    public String period(String name) {
+        Date date = new Date();  
+        SimpleDateFormat formatter = new SimpleDateFormat("HH");
+        String strDate = formatter.format(date); 
+        int i=Integer.parseInt(strDate);  
+         if(i>5 && i<12){
+           return "good morning "+name;
+         }
+        else if (i>12&&i<17){
+            return"good afternoon "+name;
+        }
+        else{
+            return"good evening "+name;
+        }
+
+        }
+        
+    }
+       
 	// See the specs to overload the guessGreeting method
     // SENSEI BONUS
     // Write your own AlfredQuote method using any of the String methods you have learned!
-}
+
 
