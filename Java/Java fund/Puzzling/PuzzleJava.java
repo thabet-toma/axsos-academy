@@ -1,4 +1,4 @@
-import java.util.Random;
+ nimport java.util.Random;
 import java.util.ArrayList;
 class  PuzzleJava{
     public  ArrayList <Integer> getTenRolls(){
