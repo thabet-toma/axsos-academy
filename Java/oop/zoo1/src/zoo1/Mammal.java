@@ -1,7 +1,9 @@
 package zoo1;
 
 public class Mammal {
-protected int energyLevel=100;
+	public int energyLevel;
+	
+	
 
 
 public int getEnergyLevel() {
