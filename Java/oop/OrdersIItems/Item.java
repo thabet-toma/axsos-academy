@@ -1,6 +1,7 @@
 public class Item{
     private String name;
     private double price;
+    private int index;
     public String getName(){
      return name;   
     }
@@ -17,4 +18,10 @@ public class Item{
         this.name=name;
         this.price=price;
     }
+    public double getIndex(){
+        return index;   
+       }
+       public void setIndex(int ind){
+           index=ind;
+       }
 }
