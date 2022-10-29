@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-    <typeInfo handle="=zoo1/src&lt;zoo1{Mammal.java[Mammal" modifiers="1" timestamp="1666967999521"/>
+    <typeInfo handle="=zoo1/src&lt;zoo1{Mammal.java[Mammal" modifiers="1" timestamp="1666969797407"/>
+    <typeInfo handle="=CareSoftInterfaces/src&lt;com.caresoft.clinicapp{User.java[User" modifiers="1" timestamp="1666972223096"/>
+    <typeInfo handle="=CareSoftInterfaces/src&lt;com.caresoft.clinicapp{HIPAACompliantAdmin.java[HIPAACompliantAdmin" modifiers="513" timestamp="1666970586556"/>
+    <typeInfo handle="=CareSoftInterfaces/src&lt;com.caresoft.clinicapp{HIPAACompliantUser.java[HIPAACompliantUser" modifiers="513" timestamp="1666972125913"/>
 </typeInfoHistroy>
