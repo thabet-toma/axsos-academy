@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -63,6 +64,17 @@ public String editPost(@Valid @ModelAttribute("travel") Travel travel,BindingRes
 		travelService.update(travel);
 		return"redirect:/";
 	}
+}
+@DeleteMapping("/delete/{id}")
+public String delete(@PathVariable("id") Long id) {
+	
+	travelService.deleteTravel(id);
+	return"redirect:/";
+}
+@GetMapping("/show/{id}")
+public String show(Model model,@PathVariable("id") Long id) {
+	model.addAttribute("Travel", travelService.findTravel(id));
+	return "show.jsp";
 }
 
 

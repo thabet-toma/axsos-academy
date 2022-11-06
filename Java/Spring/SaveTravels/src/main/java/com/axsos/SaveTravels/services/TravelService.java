@@ -41,6 +41,12 @@ public Travel update(Travel t) {
 		return null;
 	}
 	}
+public void deleteTravel(Long id) {
+	Optional <Travel>optionalTravel=travelRepository.findById(id);
+	if(optionalTravel.isPresent()) {
+		travelRepository.delete(optionalTravel.get());
+	}
+}
 
 }
 

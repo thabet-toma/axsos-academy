@@ -33,14 +33,19 @@ color:red;
 <th>Expense</th>
    <th>vendor</th>
    <th>Amount</th>
-   <th>Actions</th>
+   <th style="width:100px">Actions</th>
   </tr>
  <c:forEach var="i" items="${Travel }">
  <tr>
- <td>${i.expense }</td>
+ <td><a href="/show/${i.id}">${i.expense }</a></td>
  <td>${i.vendor }</td>
  <td>${i.amount }</td>
- <td><a href="/edit/${ i.id}">edit</a>
+ <td style="display:flex;align-items:center;"><a href="/edit/${ i.id}">edit</a><form action="/delete/${i.id}" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button style="background-color:red;margin-top:0px;">Delete</button>
+</form>
+</td>
+ 
  </tr>
  </c:forEach>
   
