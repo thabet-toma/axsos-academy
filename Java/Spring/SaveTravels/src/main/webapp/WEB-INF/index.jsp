@@ -33,12 +33,14 @@ color:red;
 <th>Expense</th>
    <th>vendor</th>
    <th>Amount</th>
+   <th>Actions</th>
   </tr>
  <c:forEach var="i" items="${Travel }">
  <tr>
  <td>${i.expense }</td>
  <td>${i.vendor }</td>
  <td>${i.amount }</td>
+ <td><a href="/edit/${ i.id}">edit</a>
  </tr>
  </c:forEach>
   

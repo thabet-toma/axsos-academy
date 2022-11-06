@@ -1,6 +1,7 @@
 package com.axsos.SaveTravels.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,29 @@ public List<Travel> allExpence(){
 }
 public Travel createExpense(Travel t) {
 return travelRepository.save(t);}
-
-
+public Travel findTravel(Long id) {
+	Optional <Travel>optionalTravel=travelRepository.findById(id);
+	if(optionalTravel.isPresent()) {
+		return optionalTravel.get();}
+		else {
+			return null;
+		}
+	}
+public Travel update(Travel t) {
+	Optional <Travel>optionalTravel=travelRepository.findById(t.getId());
+	if(optionalTravel.isPresent()) {
+		Travel a=optionalTravel.get();
+		a=t;
+		return travelRepository.save(a);}
+	
+	else {
+		return null;
+	}
+	}
 
 }
+
+
+
+
+
