@@ -19,7 +19,7 @@ import com.axsos.SaveTravels.services.TravelService;
 
 @Controller
 
-public class TravelController {
+public class controller {
 private final TravelService travelService;
 
 public TravelController(TravelService travelService) {
