@@ -2,12 +2,15 @@ package com.axsos.LoginReg.Services;
 
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 
 import com.axsos.LoginReg.Repositories.UserRepository;
+
 import com.axsos.LoginReg.models.LoginUser;
 import com.axsos.LoginReg.models.User;
 
@@ -52,5 +55,13 @@ public class UserService {
             return user;
         }
     }
+
+	public User findUserById(Long id) {
+		Optional <User> optional=userRepo.findById(id);
+		return optional.get();
+		
+	}
+
+	
     
 }

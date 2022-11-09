@@ -12,8 +12,27 @@
 </head>
 <body>
 <h1 style="color:purple">Welcome, ${user.userName }</h1>
-<p>this is your dashboard nothing to see here</p>
+<p>Books from evryone's</p>
 <a href="/logout">logout</a>
+<a href="/AddBook">Add to my Shell</a>
+<table border="1">
+<tr>
+<th>Id</th>
+<th>Title</th>
+<th>Author Name</th>
+<th>Posted by</th>
+</tr>
+<c:forEach var="i" items="${AllBook}">
+<tr> 
+<td><c:out value="${i.id}"/></td>
+<td><a href="/book/${i.id}">${i.title}</a></td>
+<td>${i.author}</td>
+<td>${i.user.userName}</td>
+
+</tr>
+</c:forEach>
+
+</table>
 
 </body>
 </html>

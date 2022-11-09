@@ -1,12 +1,16 @@
 package com.axsos.LoginReg.models;
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
@@ -46,9 +50,30 @@ public class User {
     private Date createdAt;
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date updatedAt;
+    @OneToMany(mappedBy="user",cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Book> book;
 
   
     public User() {}
+    
+
+	public User(Long id,
+			 String userName,
+			 String email,
+			 String password,
+			 String confirm,
+			Date createdAt, Date updatedAt, List<Book> book) {
+		
+		this.id = id;
+		this.userName = userName;
+		this.email = email;
+		this.password = password;
+		this.confirm = confirm;
+		this.createdAt = createdAt;
+		this.updatedAt = updatedAt;
+		this.book = book;
+	}
+
 
 	public Long getId() {
 		return id;
@@ -89,8 +114,18 @@ public class User {
 	public void setConfirm(String confirm) {
 		this.confirm = confirm;
 	}
+	
     
-    // TODO - Don't forget to generate getters and setters
+    public List<Book> getBook() {
+		return book;
+	}
+
+	public void setBook(List<Book> book) {
+		this.book = book;
+	}
+	
+
+	// TODO - Don't forget to generate getters and setters
 	@PrePersist
     protected void onCreate(){
         this.createdAt = new Date();
