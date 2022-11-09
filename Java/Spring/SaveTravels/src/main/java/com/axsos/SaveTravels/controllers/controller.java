@@ -22,7 +22,7 @@ import com.axsos.SaveTravels.services.TravelService;
 public class controller {
 private final TravelService travelService;
 
-public TravelController(TravelService travelService) {
+public controller(TravelService travelService) {
 	
 	this.travelService = travelService;
 }

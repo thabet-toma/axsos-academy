@@ -9,7 +9,6 @@ import com.axsos.SaveTravels.models.Travel;
 import com.axsos.SaveTravels.reopsitories.TravelRepository;
 
 @Service
-
 public class TravelService {
 private final TravelRepository travelRepository;
 

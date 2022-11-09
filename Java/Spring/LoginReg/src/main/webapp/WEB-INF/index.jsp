@@ -1,0 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=windows-1256"
+    pageEncoding="windows-1256"%>
+    
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page isErrorPage="true" %> 
+  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<title>Insert title here</title>
+<style>
+.body{
+display:flex;
+}
+</style>
+</head>
+<body>
+<h1 style="color:purple">Welcome!</h1>
+<p>join our growing community</p>
+<div class="body">
+<form:form action="/register" method="post" modelAttribute="newUser">
+<h2>Register</h2>
+        <div class="form-group">
+            <label>User Name:</label>
+            <form:input path="userName" class="form-control" />
+            <form:errors path="userName" class="text-danger" />
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+            <form:input path="email" class="form-control" />
+            <form:errors path="email" class="text-danger" />
+        </div>
+        <div class="form-group">
+            <label>Password:</label>
+            <form:password path="password" class="form-control" />
+            <form:errors path="password" class="text-danger" />
+        </div>
+        <div class="form-group">
+            <label>Confirm Password:</label>
+            <form:password path="confirm" class="form-control" />
+            <form:errors path="confirm" class="text-danger" />
+        </div>
+        <input type="submit" value="Register" class="btn btn-primary" />
+    </form:form>
+
+    <form:form action="/login" method="post" modelAttribute="newLogin">
+    <h2>Log in</h2>
+        <div class="form-group">
+            <label>Email:</label>
+            <form:input path="email" class="form-control" />
+            <form:errors path="email" class="text-danger" />
+        </div>
+        <div class="form-group">
+            <label>Password:</label>
+            <form:password path="password" class="form-control" />
+            <form:errors path="password" class="text-danger" />
+        </div>
+        <input type="submit" value="Login" class="btn btn-success" />
+    </form:form>
+    </div>
+</body>
+</html>
