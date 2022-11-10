@@ -41,7 +41,12 @@ public class Book {
     private Date updatedAt;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
+    
     private User user;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="userp_id")
+    private User userp;
+    private boolean borrow;
 	public Book() {
 		
 	}
@@ -91,6 +96,24 @@ public class Book {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+	
+
+	public boolean isBorrow() {
+		return borrow;
+	}
+
+	public void setBorrow(boolean borrow) {
+		this.borrow = borrow;
+	}
+	
+
+	public User getUserp() {
+		return userp;
+	}
+
+	public void setUserp(User userp) {
+		this.userp = userp;
 	}
 
 	@PrePersist

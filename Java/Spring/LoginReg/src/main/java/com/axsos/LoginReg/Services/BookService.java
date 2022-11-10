@@ -40,4 +40,9 @@ public void updatebook( Book book) {
 public void delete(Long id) {
 	Optional <Book> optional=bookRepo.findById(id);
 	bookRepo.delete(optional.get());
-}}
+}
+public List <Book> isBorrow( ){
+	return bookRepo.findByborrow(false);
+} 
+
+}

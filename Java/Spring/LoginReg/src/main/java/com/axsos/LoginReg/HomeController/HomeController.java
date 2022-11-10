@@ -1,5 +1,7 @@
 package com.axsos.LoginReg.HomeController;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -139,6 +141,41 @@ public class HomeController {
 //        model.addAttribute("user",user);
         return "redirect:/home";
     }
-
+    
+    @GetMapping("/bookmarket")
+    public String market(HttpSession session,Model model) {
+    	 Long user_id = (Long) session.getAttribute("userId");
+         User thisUser = userServ.findUserById(user_id);
+         List <Book> Bookp=bookServ.isBorrow();
+         model.addAttribute("user", thisUser);
+         model.addAttribute("booksp", Bookp);
+         
+         System.out.println(thisUser.getBookp().size());
+         return "market.jsp";
+         
+    	
+    }
+    @PostMapping("/borrow/{id}")
+    public String borrow(HttpSession session,@PathVariable("id") Long id) {
+    	Book book1 =bookServ.findBook(id);
+    	Long user_id = (Long) session.getAttribute("userId");
+        User thisUser = userServ.findUserById(user_id);
+        
+        book1.setUserp(thisUser);
+        book1.setBorrow(true);
+        bookServ.updatebook(book1);
+        return "redirect:/bookmarket";
+    }
+    @PostMapping("/return/{id}")
+    public String ret(HttpSession session,@PathVariable("id") Long id) {
+    	Book book1 =bookServ.findBook(id);
+    	Long user_id = (Long) session.getAttribute("userId");
+        User thisUser = userServ.findUserById(user_id);
+        
+        book1.setUserp(null);
+        book1.setBorrow(false);
+        bookServ.updatebook(book1);
+        return "redirect:/bookmarket";
+    }
     
     }

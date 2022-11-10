@@ -9,4 +9,5 @@ import com.axsos.LoginReg.models.Book;
 @Repository
 public interface BookRepository extends CrudRepository<Book, Long> {
 public List<Book> findAll();
+List<Book> findByborrow(boolean bul);
 }

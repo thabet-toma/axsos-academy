@@ -52,7 +52,9 @@ public class User {
     private Date updatedAt;
     @OneToMany(mappedBy="user",cascade=CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Book> book;
-
+    @OneToMany(mappedBy="userp",cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Book> bookp;
+    
   
     public User() {}
     
@@ -124,6 +126,17 @@ public class User {
 		this.book = book;
 	}
 	
+	
+
+	public List<Book> getBookp() {
+		return bookp;
+	}
+
+
+	public void setBookp(List<Book> bookp) {
+		this.bookp = bookp;
+	}
+
 
 	// TODO - Don't forget to generate getters and setters
 	@PrePersist

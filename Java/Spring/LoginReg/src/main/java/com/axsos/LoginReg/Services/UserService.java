@@ -61,6 +61,9 @@ public class UserService {
 		return optional.get();
 		
 	}
+	public User ubdate(User user ) {
+		return userRepo.save(user);
+	}
 
 	
     
