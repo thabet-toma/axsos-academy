@@ -31,7 +31,7 @@
 <td>${i.user.userName}</td>
 <c:choose>
 
-<c:when test="${userId==book.user.id }">
+<c:when test="${userId==i.user.id }">
 <td>
 <form:form action="/update/${i.id}" method="post" modelAttribute="updatebook">
                             <input type="submit" class="form-control" value="Edit">
