@@ -1,0 +1,6 @@
+package singlylinkedtest;
+public Node head;
+public class SLL {
+    // your code here
+}
+

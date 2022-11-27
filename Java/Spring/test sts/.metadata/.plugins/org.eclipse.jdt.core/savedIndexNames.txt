@@ -1,0 +1,20 @@
+INDEX VERSION 1.131+C:\Users\ÇÈÏÇÚ\Desktop\test sts\.metadata\.plugins\org.eclipse.jdt.core
+887085968.index
+1307387401.index
+933519114.index
+549125790.index
+661918767.index
+1450834312.index
+2476092430.index
+464714644.index
+735049913.index
+1042309159.index
+1378429191.index
+3491432938.index
+2032082661.index
+708513779.index
+1496738781.index
+942040036.index
+1865797976.index
+2062994779.index
+4069059761.index

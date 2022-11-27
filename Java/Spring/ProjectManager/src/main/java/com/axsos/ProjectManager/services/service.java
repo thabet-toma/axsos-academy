@@ -112,7 +112,11 @@ public class service {
    }
    public User findUserById(Long id) {
 		Optional <User> optional=userRepo.findById(id);
-		return optional.get();
+		if( optional.isPresent()) {
+		return optional.get();}
+		else {
+			return null;
+		}
 		
 	}
   

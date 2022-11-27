@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>Create a Project</h1>
-<form:form action="/CreateProject" method="post" modelAttribute="project">
+<form:form action="/CreateTeam" method="post" modelAttribute="project">
 <h2>Register</h2>
         <p>
             <label>Project Title</label>
