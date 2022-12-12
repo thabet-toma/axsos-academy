@@ -1,13 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Todo from './component/Todo';
-
+import Pokemon from './component/Pokemon';
 
 function App() {
   return (
     <div className="App">
-      
-      <Todo/>
+      <Pokemon/>
     </div>
   );
 }
