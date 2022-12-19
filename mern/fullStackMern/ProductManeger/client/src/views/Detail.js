@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { navigate } from '@reach/router';
+import DeleteButton from '../component/DeleteButton';
 
 const Detail = (props) => {
     const [product, setProdect] = useState({})
@@ -9,12 +10,8 @@ const Detail = (props) => {
             .then(res => setProdect(res.data))
             .catch(err => console.error(err));
     }, []);
-    const deletePerson = (personId) => {
-        axios.delete('http://localhost:8000/api/users/delete/'+ personId)
-            .then(res => {
-                // removeFromDom(personId)
-            })
-            .catch(err => console.error(err));
+    const deleteProduct = (personId) => {
+      
             navigate("/")
     }
 
@@ -23,9 +20,7 @@ const Detail = (props) => {
       <p>{product.Title}</p>
       <p>{product.Price}</p>
       <p>{product.Desc}</p>
-      <button onClick={(e)=>{deletePerson(props.id)}}>
-                        Delete
-                    </button>
+      <DeleteButton personId={props.id} successCallback={deleteProduct}/>
     </div>
   )
 }

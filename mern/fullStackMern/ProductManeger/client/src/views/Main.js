@@ -3,6 +3,7 @@ import React ,{useState,useEffect} from 'react'
 import axios from 'axios';
 import Create from '../component/Create'
 import ProductList from '../component/ProductList'
+import DeleteButton from '../component/DeleteButton';
 
 
 const Main = () => {
@@ -16,11 +17,22 @@ const Main = () => {
             })
             .catch(err => console.error(err));
     });
+    const createProduct=product1=>{
+     axios.post('http://localhost:8000/api/Products/new', product1)
+            .then(res=> setProduct([...product, res.data]))
+            .catch(err=>console.log(err))
+    }
+    const removeFromDom = personId => {
+        
+        setProduct(product.filter(person => person._id != personId))
+    }
+
   return (
     <div>
-      <Create/>
+      <Create onSubmitProp={createProduct} initialTitle="" initialPrice="" initialDesc=""/>
+       
       <br/>
-      {loaded&&<ProductList product={product}/>}
+      {loaded&&<ProductList product={product} removeFromDom={removeFromDom} />}
     </div>
   )
 }
