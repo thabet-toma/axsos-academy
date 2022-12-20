@@ -16,7 +16,7 @@ const ProductList = (props) => {
   return (
     <div>
         {props.product.map( (pro, i) =>
-        <div>
+        <div key={i}>
                 <Link to={"/"+pro._id} key={i} >{pro.Title}</Link>
                 <DeleteButton personId={pro._id} successCallback={()=>props.removeFromDom(pro._id)}/>
                 <br/>
