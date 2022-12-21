@@ -21,7 +21,7 @@ const List = () => {
       setPlayers(players.filter(person => person._id != personId))
   }
   return (
-    <div >
+    <div style={{backgroundColor:"white",height:'70vh'}} >
       <h2><Link to="/players/list">List</Link>|<Link to="/players/addPlayer">Add players</Link></h2>
       {loaded &&
         <Table removefromdom={removeFromDom}  data={players} />}
